@@ -1,10 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var siteName = "传染病信息管理系统";
+    var cssPath = $"/css/{ViewBag.Ref}.css";
+    var jsPath = $"/js/{ViewBag.Ref}.js";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - 宿舍管理系统</title>
+    <title>@ViewBag.Title - 宿舍管理系统</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="@cssPath" />
 </head>
 <body>
     <header>
@@ -41,6 +48,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="@jsPath"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Ref = "template";
+    ViewBag.Title = "模板";
+}
+
+<div class="text-center">
+    <h1>Hi</h1>
+    <div id="button" class="button" onclick="click1('hello')">按钮</div>
+    @foreach (var student in ViewBag.Students)
+    {
+        <p>@student[0]</p>
+    }
+    <a class="btn btn-primary" href="/template/modify">清空</a>
+</div>
