@@ -57,7 +57,7 @@ namespace DormitoryManagement
 
         private static MySqlConnection CreateConnection()
         {
-            const string ConnectionString = "server=localhost;database=dormitory_management;uid=root;pwd=123456";
+            const string ConnectionString = "server=localhost;database=dormitory_management;uid=root;pwd=883HTTP";
             var connection = new MySqlConnection(ConnectionString);
             try
             {
