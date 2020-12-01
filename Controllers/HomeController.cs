@@ -43,19 +43,20 @@ namespace DormitoryManagement.Controllers
 
         public IActionResult sing_up(string user, string password)
         {
-            string sql = string.Format("select count(*) from stident,staff where id='{0}' and password='{1}'", user, password);
-
-            if (sql != "")
+            var result = Sql.Read("select * from staff where id=@0 and password=@1", user, password);
+            if (result.Count == 0)
             {
-                return View();
+                this.ViewData["failed"] = true;
+                return View("Login");
+            }
+            if (result[0]["position"].ToString() == "manager")
+            {
+                return RedirectToAction("Index", "Manager");
             }
             else
             {
-                Console.WriteLine("登录失败");
-                return View("Home");
+                return RedirectToAction("Index", "Duty");
             }
         }
-
-
     }
 }

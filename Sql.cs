@@ -31,7 +31,7 @@ namespace DormitoryManagement
             var command = CreateCommand(sql, args);
             using var reader = new MySqlDataAdapter(command);
             using var table = new DataTable();
-            reader.Fill(table);
+            _ = reader.Fill(table);
             ReleaseCommand(command);
             return table.Rows;
         }
@@ -57,7 +57,7 @@ namespace DormitoryManagement
 
         private static MySqlConnection CreateConnection()
         {
-            const string ConnectionString = "server=localhost;database=dormitory_management;uid=root;pwd=883HTTP";
+            const string ConnectionString = "server=localhost;database=dormitory_management;uid=root;pwd=123456";
             var connection = new MySqlConnection(ConnectionString);
             try
             {
