@@ -35,5 +35,27 @@ namespace DormitoryManagement.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        public IActionResult sing_up(string user, string password)
+        {
+            string sql = string.Format("select count(*) from stident,staff where id='{0}' and password='{1}'", user, password);
+
+            if (sql != "")
+            {
+                return View();
+            }
+            else
+            {
+                Console.WriteLine("登录失败");
+                return View("Home");
+            }
+        }
+
+
     }
 }
