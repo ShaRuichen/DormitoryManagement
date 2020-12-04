@@ -1,5 +1,12 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{ 
+    ViewData["Ref"] = "manager";
+    ViewData["Title"] = "管理员";
 }
+
+<div>
+    <a href="/manager/manageentrance">管理门禁权限</a>
+    <a href="/manager/searchemptybed">查询空床位</a>
+    <a href="/manager/changetable">更改住宿名单</a>
+    <a href="/manager/showstudenttable">查看学生信息</a>
+    <a href="/manager/showunpaymenttable">查看未缴费学生名单</a>
+</div>

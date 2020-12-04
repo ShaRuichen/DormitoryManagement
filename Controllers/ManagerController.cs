@@ -1,17 +1,47 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace DormitoryManagement.Controllers
 {
     public class ManagerController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index() => View();
+
+        public IActionResult ManageEntrance()
         {
             return View();
+        }
+
+        public IActionResult SearchEmptyBed()
+        {
+            return View();
+        }
+
+        public IActionResult ChangeTable()
+        {
+            return View();
+        }
+
+        public IActionResult ShowStudentTable()
+        {
+            return View();
+        }
+
+        public IActionResult ShowUnpaymentTable()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EntranceTable(string id, string open)
+        {
+            Sql.Execute("UPDATE student SET authority = @0 WHERE id = @1", open, id);
+            return View("Index");
+        }
+
+        [HttpPost]
+        public void ChangeStudent(string id, string bed)
+        {
+
         }
     }
 }

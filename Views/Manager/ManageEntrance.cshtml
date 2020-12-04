@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "管理门禁权限";
+    ViewData["Ref"] = "manager";
+}
+
+<form action="/manager/entrancetable" method="post">
+    ID：<input type="text" name="id" /><br />
+    是否开通门禁：
+    是<input type="radio" name="open" value="true" />
+    否<input type="radio" name="open" value="false" />
+    <br /><input type="submit" value="确定" />
+</form>
