@@ -27,6 +27,7 @@ namespace DormitoryManagement.Controllers
 
         public IActionResult ShowUnpaymentTable()
         {
+            this.ViewBag.Students = Sql.Read("SELECT * FROM student WHERE charge = 'false'");
             return View();
         }
 
