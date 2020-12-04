@@ -21,6 +21,7 @@ namespace DormitoryManagement.Controllers
 
         public IActionResult ShowStudentTable()
         {
+            this.ViewBag.Students = Sql.Read("SELECT * FROM student");
             return View();
         }
 
