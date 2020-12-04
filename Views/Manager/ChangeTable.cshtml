@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "住宿名单更改";
+    ViewData["Ref"] = "manager";
+}
+
+<form action="/manager/changestudent" method="post">
+    请输入学生学号：<input type="text" name="id" /><br />
+    请输入学生的楼房号和房间号：<input type="text" name="bed" /><br />
+    <input type="submit" value="确定" />
+</form>

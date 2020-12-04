@@ -37,9 +37,11 @@ namespace DormitoryManagement.Controllers
         }
 
         [HttpPost]
-        public void ChangeStudent(string id, string bed)
+        public IActionResult ChangeStudent(string id, string bed)
         {
-
+            var bedParts = bed.Split(' ');
+            Sql.Execute("UPDATE student SET building = @0, room = @1 WHERE id = @2", bedParts[0], bedParts[1], id);
+            return View("Index");
         }
     }
 }
