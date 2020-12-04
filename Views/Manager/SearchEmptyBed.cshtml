@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "查询空床位";
+    ViewData["Ref"] = "manager";
+}
+
+<table>
+    <thead>
+        <th>楼房</th>
+        <th>房间号</th>
+        <th>剩余人数</th>
+        <th>性别</th>
+    </thead>
+    <tbody>
+        @foreach (var room in ViewBag.Rooms)
+        {
+            var leftNumber = 4 - room["live_in_number"];
+            <tr>
+                <td>@room["building"]</td>
+                <td>@room["room_number"]</td>
+                <td>@leftNumber</td>
+                <td>@room["sex"]</td>
+            </tr>
+        }
+    </tbody>
+</table>

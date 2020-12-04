@@ -6,13 +6,11 @@ namespace DormitoryManagement.Controllers
     {
         public IActionResult Index() => View();
 
-        public IActionResult ManageEntrance()
-        {
-            return View();
-        }
+        public IActionResult ManageEntrance() => View();
 
         public IActionResult SearchEmptyBed()
         {
+            this.ViewBag.Rooms = Sql.Read("SELECT * FROM room WHERE live_in_number < 4");
             return View();
         }
 
