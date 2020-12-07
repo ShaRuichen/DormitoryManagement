@@ -2,12 +2,32 @@
 }
 
 <p>外来人员登记</p>
+<ol class="breadcrumb">
+    <li><a href="/Duty">主页</a><span style="padding:5px">/</span></li>
+    <li><a href="/Duty/LateStudent">夜归学生</a><span style="padding:5px">/</span></li>
+    <li class="active">外来人员</li>
+</ol>
 
-<form action="~/Duty/sign_in_stranger" method="post">
-    证件号：<input type="text" name="p_id" /><br />
-    姓名：<input type="text" name="name" /><br />
-    进入时间：<input type="text" name="in_time" /><br />
-    离开时间：<input type="text" name="out_time" /><br />
-    缘由：<input type="text" name="type" /><br />
-    <input type="submit" value="登记" />
-</form> 
+<form action="~/Duty/sign_in_stranger" method="post" style="width:50%;text-align:center;margin:auto">
+    <div class="form-group">
+        <br />
+        <input type="text" class="form-control" name="p_id" placeholder="证件号" />
+    </div>
+    <div class="form-group">
+        <br />
+        <input type="text" class="form-control" name="name" placeholder="姓名" />
+    </div>
+    <div class="form-group">
+        <br />
+        <input type="text" class="form-control" name="in_time" placeholder="时间" />
+    </div>
+    <div class="form-group">
+        <br />
+        <input type="text" class="form-control" name="out_time" placeholder="时间" />
+    </div>
+    <div class="form-group">
+        <br />
+        <input type="text" class="form-control" name="type" placeholder="缘由" />
+    </div>
+    <input type="submit" class="btn-block btn-dark" value="登记" />
+</form>

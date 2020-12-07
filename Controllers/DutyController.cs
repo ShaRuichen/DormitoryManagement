@@ -43,5 +43,13 @@ namespace DormitoryManagement.Controllers
             }
             return View("Index");
         }
+        //[HttpPost]
+        //public JsonResult search(string type, string info)
+        //{
+        //    return Json(new
+        //    {
+                
+        //    });
+        //}
     }
 }
