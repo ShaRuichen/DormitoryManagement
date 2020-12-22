@@ -1,10 +1,16 @@
 ﻿@{
     ViewData["Title"] = "主页";
+    ViewBag.Ref = "home";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>宿舍管理系统</h1>
 </div>
+<div class="text-right">
+    <p>Index</p>
+</div>
+<div>
+    <button type="button" class="btn-block btn-info" style="width:50%;text-align:center;margin:auto" onclick="Login()">登录</button>
+</div>
+<br />
 
-<a href='/Home/Login'>登录</a>

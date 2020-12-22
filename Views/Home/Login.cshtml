@@ -5,11 +5,25 @@
     ViewData["Title"] = "登录";
     var failedText = ViewData["failed"] is bool ? "登陆失败" : string.Empty;
 }
-<p>登录页面</p>
-<form action="~/Home/sing_up" method="post">
+<div class="text-center">
+    <h1>宿舍管理系统</h1>
+</div>
+<div class="text-right">
+    <p>登录页面</p>
+</div>
+
+<form action="~/Home/sing_up" method="post" style="width:50%;text-align:center;margin:auto">
     <p>@failedText</p>
-    ID：<input type="text" name="user" /><br />
-    密码：<input type="password" name="password" /><br />
-    <input type="submit" value="登录" />
+    <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" name="user" placeholder="ID" />
+        <br />
+    </div>
+    <div class="form-group">
+        <label>密码</label>
+        <input type="password" class="form-control" name="password" placeholder="密码" />
+        <br />
+    </div>
+    <input class="btn-block btn-dark" type="submit" value="登录" />
 </form>
 

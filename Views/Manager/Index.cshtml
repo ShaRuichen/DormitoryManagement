@@ -1,12 +1,13 @@
 ﻿@{ 
-    ViewData["Ref"] = "manager";
-    ViewData["Title"] = "管理员";
+    ViewBag.Ref = "manager";
+    ViewBag.Title = "管理员";
 }
 
+<p>管理员</p>
 <div>
-    <a href="/manager/manageentrance">管理门禁权限</a>
-    <a href="/manager/searchemptybed">查询空床位</a>
-    <a href="/manager/changetable">更改住宿名单</a>
-    <a href="/manager/showstudenttable">查看学生信息</a>
-    <a href="/manager/showunpaymenttable">查看未缴费学生名单</a>
+    <button onclick="manageentrance()" class="btn-block btn-info myButton">管理门禁权限</button><br />
+    <button onclick="searchemptybed()" class="btn-block btn-info myButton">查询空床位</button><br />
+    <button onclick="changetable()" class="btn-block btn-info myButton">更改住宿名单</button><br />
+    <button onclick="showstudenttable()" class="btn-block btn-info myButton">查看学生信息</button><br />
+    <button onclick="showunpaymenttable()" class="btn-block btn-info myButton">查看未缴费学生名单</button>
 </div>
