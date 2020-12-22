@@ -3,19 +3,19 @@
     ViewData["Ref"] = "manager";
 }
 
-<table>
+<table class="table">
     <thread>
         <tr>
-            <th>学号</th>
-            <th>姓名</th>
-            <th>是否已催缴</th>
+            <th class="col">学号</th>
+            <th class="col">姓名</th>
+            <th class="col">催缴</th>
         </tr>
     </thread>
     <tbody>
         @foreach (var student in ViewBag.Students)
         {
             <tr>
-                <th>@student["id"]</th>
+                <th class="row">@student["id"]</th>
                 <td>@student["name"]</td>
                 <td>@student["charge_urge"]</td>
             </tr>
