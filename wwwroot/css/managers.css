@@ -6,3 +6,13 @@
     text-align: center;
     margin: auto;
 }
+
+.myFrame {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.myTable {
+    background-color: white;
+}

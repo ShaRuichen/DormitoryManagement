@@ -1,9 +1,13 @@
 ﻿@{
     ViewData["Title"] = "住宿名单更改";
-    ViewData["Ref"] = "manager";
+    ViewData["Ref"] = "managers";
 }
 
-<form action="/manager/changestudent" method="post">
+<ol class="breadcrumb">
+    <li><a href="/Manager">主页</a><span style="padding:5px">/</span></li>
+    <li class="active">更改住宿名单</li>
+</ol>
+<form class="myFrame" action="/manager/changestudent" method="post">
     <div class="form-group">
         请输入学生学号：<input class="form-control" type="text" name="id" /><br />
     </div>

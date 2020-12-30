@@ -3,7 +3,11 @@
     ViewBag.Ref = "managers";
 }
 
-<form action="/manager/entrancetable" method="post">
+<ol class="breadcrumb">
+    <li><a href="/Manager">主页</a><span style="padding:5px">/</span></li>
+    <li class="active">管理门禁权限</li>
+</ol>
+<form class="myFrame" action="/manager/entrancetable" method="post">
     <div class="form-group">
         ID：<input class="form-control" type="text" name="id" /><br />
     </div>

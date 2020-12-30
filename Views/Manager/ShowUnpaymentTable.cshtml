@@ -1,9 +1,13 @@
 ﻿@{
     ViewData["Title"] = "查看未缴费学生名单";
-    ViewData["Ref"] = "manager";
+    ViewData["Ref"] = "managers";
 }
 
-<table class="table">
+<ol class="breadcrumb">
+    <li><a href="/Manager">主页</a><span style="padding:5px">/</span></li>
+    <li class="active">查看未缴费学生名单</li>
+</ol>
+<table class="table myTable">
     <thread>
         <tr>
             <th class="col">学号</th>
